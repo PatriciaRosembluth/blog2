@@ -1,5 +1,13 @@
 Blog::Application.routes.draw do
-  get "welcome/index"
+  get "/welcome/index"
+  get '/posts'=> 'posts#index'
+  get '/posts/new' => 'posts#new'
+  get '/posts/:id' => 'posts#edit'
+  post '/posts'=> 'posts#create'
+  post '/posts/new' => 'posts#create'
+  post '/posts/:id' => 'posts#update'
+  get  '/posts/:id'=>  'posts#show'
+  get '/posts/destroy/:id' => 'posts#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

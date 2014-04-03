@@ -1,0 +1,22 @@
+
+  <% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+<form action="/posts<%= @post.id ? '/'+@post.id.to_s : '' %>" method="post">
+  Titulo
+  <input type="string" name ="post[title]" value= "<%=@post.title%>">
+  <br>
+  Texto
+  <input type="text" name ="post[text]" value= "<%=@post.text%>">
+  <br>
+  <input type="submit" name"commit" value="Guardar">
+</form>

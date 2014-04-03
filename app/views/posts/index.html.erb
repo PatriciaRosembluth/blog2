@@ -1,0 +1,29 @@
+<b>Todos los posts</b>
+<br>
+<%= notice %>
+<table>
+	<tr>
+		<th>Titulo</th>
+		<th>Texto</th>
+		<th></th>
+	</tr>
+<% @posts.each do |post| %>
+<tr>
+	<td>
+		<%= post.title %>
+	</td>
+	<td>
+		<%= post.text %>
+	</td>
+	<td>
+		<a href="/posts/<%= post.id %>">Ver</a>
+		<a href="/posts/<%= post.id %>">Editar</a>
+		<a href="/posts/destroy/<%= post.id %>">Borrar</a>
+	</td>
+</tr>
+<%end%>
+</table>
+<br>
+<a href="/posts/new">Nuevo Post</a>
+
+
