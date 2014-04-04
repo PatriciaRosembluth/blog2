@@ -1,5 +1,6 @@
 Blog::Application.routes.draw do
-  get "/welcome/index"
+  get "/"=> 'posts#welcome'
+  get '/posts/welcome' => 'posts#welcome'
   get '/posts'=> 'posts#index'
   get '/posts/new' => 'posts#new'
   post '/posts/new' => 'posts#create'
@@ -13,7 +14,7 @@ Blog::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'posts#welcome'
 
   resources :posts do
     resources :comments

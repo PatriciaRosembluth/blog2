@@ -16,13 +16,18 @@
 <h2>Comments</h2>
 <% @post.comments.each do |comment| %>
   <p>
-    <strong>Commenter:</strong>
+    <strong>Ususario:</strong>
     <%= comment.commenter %>
   </p>
  
   <p>
-    <strong>Comment:</strong>
+    <strong>Commentario:</strong>
     <%= comment.body %>
+  </p>
+
+  <p>
+    <strong>Fecha:</strong>
+    <%= comment.created_at %>
   </p>
 <% end %>
  

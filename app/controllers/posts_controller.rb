@@ -2,7 +2,11 @@ class PostsController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 	def index
   		@posts = Post.all
-  	end
+  end
+
+  def welcome
+    @posts = Post.all
+  end
 
 	def new
  	 	@post = Post.new
