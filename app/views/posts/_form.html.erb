@@ -11,7 +11,7 @@
   </div>
   <% end %>
 
-<form action="/posts<%= @post.id ? '/'+@post.id.to_s : '' %>" method="post">
+<form action="/posts<%= @post.id ? '/'+ 'update' + '/' + @post.id.to_s : '' %>" method="post">
   Titulo
   <input type="string" name ="post[title]" value= "<%=@post.title%>">
   <br>

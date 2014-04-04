@@ -7,4 +7,38 @@
   <strong>Texto:</strong>
   <%= @post.text %>
 </p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @post.created_at %>
+</p>
+
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+ 
+<h2>Add a comment:</h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :Usuario %><br />
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :Cometario %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
 <%= link_to 'Atras', posts_path %>

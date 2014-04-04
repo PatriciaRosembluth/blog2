@@ -17,7 +17,7 @@
 	</td>
 	<td>
 		<a href="/posts/<%= post.id %>">Ver</a>
-		<a href="/posts/<%= post.id %>">Editar</a>
+		<a href="/posts/edit/<%= post.id %>">Editar</a>
 		<a href="/posts/destroy/<%= post.id %>">Borrar</a>
 	</td>
 </tr>
@@ -25,5 +25,7 @@
 </table>
 <br>
 <a href="/posts/new">Nuevo Post</a>
+<br>
+<%= link_to "Pagina Principal", controller: "welcome" %>
 
 
