@@ -1,7 +1,8 @@
 Blog::Application.routes.draw do
-  get "/"=> 'posts#welcome'
+  get "/" => 'posts#welcome'
   get '/posts/welcome' => 'posts#welcome'
   get '/posts'=> 'posts#index'
+  get '/posts/report' => 'posts#report'
   get '/posts/new' => 'posts#new'
   post '/posts/new' => 'posts#create'
   post '/posts'=> 'posts#create'

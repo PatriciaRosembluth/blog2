@@ -1,10 +1,15 @@
 class PostsController < ApplicationController
 	skip_before_filter :verify_authenticity_token
+  attr_accessor :like
 	def index
   		@posts = Post.all
   end
 
   def welcome
+    @posts = Post.all
+  end
+
+  def report
     @posts = Post.all
   end
 
@@ -46,6 +51,6 @@ class PostsController < ApplicationController
 
 	private
   	def post_params
-    	params.require(:post).permit(:title, :text)
+    	params.require(:post).permit(:title, :text, :like)
   	end
 end
