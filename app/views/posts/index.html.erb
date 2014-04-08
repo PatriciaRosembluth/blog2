@@ -1,9 +1,10 @@
 <h1>Pagina Administradora</h1>
-<b>Todos los posts</b>
 <br>
 <%= notice %>
-
-<%= link_to_function "Buscar", "$('#hide').toggle()" %><br>
+<br>
+<%= link_to_function "Buscar", "$('#hide').toggle()" %>
+<br>
+<br>
 <div id="hide" style="display:none">
 <br>
 <form method="GET" action="/posts/search">
@@ -26,16 +27,16 @@ Palabra: <input type="text" name="text" id="text"> &nbsp;&nbsp;&nbsp;
 		<%= post.text %>
 	</td>
 	<td>
-		<a href="/posts/<%= post.id %>">Ver</a>
-		<a href="/posts/edit/<%= post.id %>">Editar</a>
-		<a href="/posts/destroy/<%= post.id %>">Borrar</a>
+		<a class="btn btn-default" href="/posts/<%= post.id %>" role="button">Ver</a>
+		<a class="btn btn-default" href="/posts/edit/<%= post.id %>" role="button">Editar</a>
+		<a class="btn btn-default" href="/posts/destroy/<%= post.id %>" role="button">Eliminar</a>
 	</td>
 </tr>
 <%end%>
 </table>
 <br>
 <p>
-  <a href="/posts/new" class="btn btn-default btn-lg disabled" role="button">Nuevo</a>
+	<a class="btn btn-default" href="/posts/new" role="button">Nuevo</a>
 </p>
 
 

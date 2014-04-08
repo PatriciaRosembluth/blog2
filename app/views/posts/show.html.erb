@@ -13,10 +13,10 @@
   <%= @post.created_at %>
 </p>
 
-<h2>Comments</h2>
+<h2>Commentarios</h2>
 <% @post.comments.each do |comment| %>
   <p>
-    <strong>Ususario:</strong>
+    <strong>Usuario:</strong>
     <%= comment.commenter %>
   </p>
  
@@ -31,7 +31,7 @@
   </p>
 <% end %>
  
-<h2>Add a comment:</h2>
+<p><strong>Agregar Comentario</strong></p>
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <p>
     <%= f.label :Usuario %><br />
@@ -42,8 +42,8 @@
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.submit %>
+    <button type=f.submit class="btn btn-default">Publicar</button>
   </p>
 <% end %>
  
-<%= link_to 'Atras', posts_path %>
+<a href="/posts/welcome" class="btn btn-primary btn-lg disabled" role="button">Atras</a>
