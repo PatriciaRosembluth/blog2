@@ -2,7 +2,16 @@
 <b>Todos los posts</b>
 <br>
 <%= notice %>
-<table>
+
+<%= link_to_function "Buscar", "$('#hide').toggle()" %><br>
+<div id="hide" style="display:none">
+<br>
+<form method="GET" action="/posts/search">
+Palabra: <input type="text" name="text" id="text"> &nbsp;&nbsp;&nbsp;
+<input type="submit" value="Buscar">
+</form>
+</div>
+<table class="table table-striped">
 	<tr>
 		<th>Titulo</th>
 		<th>Texto</th>
@@ -25,7 +34,8 @@
 <%end%>
 </table>
 <br>
-<a href="/posts/new">Nuevo Post</a>
-<br>
-<a href="/posts/welcome">Pagina Principal</a>
+<p>
+  <a href="/posts/new" class="btn btn-default btn-lg disabled" role="button">Nuevo</a>
+</p>
+
 

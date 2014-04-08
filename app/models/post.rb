@@ -1,4 +1,4 @@
-class Post < ActiveRecord::Base
+  class Post < ActiveRecord::Base
   after_create :likes_Cero
   has_many :comments
   validates :title, presence: true,
@@ -8,4 +8,15 @@ class Post < ActiveRecord::Base
   def likes_Cero
 	likes=0
   end
+
+  def correspondeApost(texto)
+    texto_a_buscar = self.text.split
+    texto_a_buscar.each do |palabra|
+      if palabra.downcase.include?(texto.downcase)
+	     return true
+    end
+  end
+  false
+  end
+
 end

@@ -2,6 +2,7 @@ Blog::Application.routes.draw do
   get "/" => 'posts#welcome'
   get '/posts/welcome' => 'posts#welcome'
   get '/posts'=> 'posts#index'
+  get '/posts/search' => 'posts#search'
   get '/posts/report' => 'posts#report'
   get '/posts/new' => 'posts#new'
   post '/posts/new' => 'posts#create'
@@ -20,6 +21,8 @@ Blog::Application.routes.draw do
   resources :posts do
     resources :comments
   end
+
+  resources :posts
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

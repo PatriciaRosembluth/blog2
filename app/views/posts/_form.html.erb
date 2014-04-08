@@ -1,4 +1,3 @@
-
   <% if @post.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@post.errors.count, "error") %> prohibited
@@ -10,13 +9,14 @@
     </ul>
   </div>
   <% end %>
-
-<form action="/posts<%= @post.id ? '/'+ 'update' + '/' + @post.id.to_s : '' %>" method="post">
-  Titulo
-  <input type="string" name ="post[title]" value= "<%=@post.title%>">
-  <br>
-  Texto
-  <input type="text" name ="post[text]" value= "<%=@post.text%>">
-  <br>
-  <input type="submit" name"commit" value="Guardar">
+<form role="form" action="/posts<%= @post.id ? '/'+ 'update' + '/' + @post.id.to_s : '' %>" method="post">
+  <div class="form-group">
+    <label for="exampleInputTittle">Titulo</label>
+    <input type="string" name ="post[title]" value= "<%=@post.title%>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputText">Texto</label>
+    <input type="text" name ="post[text]" value= "<%=@post.text%>">
+  </div>
+  <button type="submit" class="btn btn-default">Publicar</button>
 </form>

@@ -49,6 +49,26 @@ class PostsController < ApplicationController
  		redirect_to '/posts', notice: 'El post fue eliminado'
 	end
 
+  def search
+    @posts = buscar(params[:text])
+    render 'index'
+  end
+
+  def buscar(texto)
+      posts = Array.new 
+      aux = Post.all
+      if texto != "" && texto != nil
+          aux.each do |i|
+          if (i.correspondeApost(texto))
+              posts.push(i)
+          end
+        end
+      else
+          posts = aux
+      end
+      return posts
+    end
+
 	private
   	def post_params
     	params.require(:post).permit(:title, :text, :like)
