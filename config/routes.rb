@@ -11,6 +11,7 @@ Blog::Application.routes.draw do
   post '/posts/update/:id' => 'posts#update'
   get '/posts/destroy/:id' => 'posts#destroy'
   get '/posts/likes/:id'=> 'posts#puts_like'
+  get '/posts/dislikes/:id'=> 'posts#dislike'
   get '/posts/:id' => 'posts#show'
   post '/posts/:id' => 'posts#show'
   # The priority is based upon order of creation: first created -> highest priority.

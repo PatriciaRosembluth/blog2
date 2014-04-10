@@ -37,6 +37,17 @@ class PostsController < ApplicationController
     redirect_to '/posts' 
   end
 
+  def dislike
+    @post = Post.find(params[:id])
+    if @post.likes != nil && @post.likes != 0
+      @post.likes = @post.likes-1
+    else
+      @post.likes=0
+    end
+    @post.save
+    redirect_to '/posts' 
+  end
+
 	def show
 		@post=Post.find(params[:id])		
 	end
@@ -66,19 +77,33 @@ class PostsController < ApplicationController
   end
 
   def buscar(texto)
-      posts = Array.new 
-      aux = Post.all
-      if texto != "" && texto != nil
-          aux.each do |i|
-          if (i.correspondeApost(texto))
-              posts.push(i)
-          end
+    posts = Array.new 
+    aux = Post.all
+    if texto != "" && texto != nil
+      aux.each do |i|
+        if (i.correspondeApost(texto))
+          posts.push(i)
         end
-      else
-          posts = aux
       end
-      return posts
+    else
+      posts = aux
     end
+      return posts
+  end
+
+  def contar_palabras_post(texto)
+    texto.split.count
+  end
+
+  def contar_palabras
+    @post = Post.find(params[:id])
+    suma=0
+    @post.comments.each do |comment|
+      suma+=comment.contar_palabras_comment(comment.body)
+    end
+    suma+=@post.contra_palabras_post(@post.text)
+    suma
+  end
 
 	private
   	def post_params
