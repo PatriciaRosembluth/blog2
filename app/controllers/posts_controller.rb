@@ -91,6 +91,26 @@ class PostsController < ApplicationController
       return posts
   end
 
+  def categoria
+    @posts = buscar_categoria(params[:category])
+    render 'index'
+  end
+
+  def buscar_categoria(categoria)
+    posts = Array.new 
+    aux = Post.all
+    if categoria != "" && categoria != nil
+      aux.each do |i|
+        if (i.EstaEnPost(categoria))
+          posts.push(i)
+        end
+      end
+    else
+      posts = aux
+    end
+      return posts
+  end  
+
   def contar_palabras_post(texto)
     texto.split.count
   end

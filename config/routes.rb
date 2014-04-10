@@ -3,6 +3,7 @@ Blog::Application.routes.draw do
   get '/posts/welcome' => 'posts#welcome'
   get '/posts'=> 'posts#index'
   get '/posts/search' => 'posts#search'
+  get '/posts/categoria' => 'posts#categoria'
   get '/posts/report' => 'posts#report'
   get '/posts/new' => 'posts#new'
   post '/posts/new' => 'posts#create'

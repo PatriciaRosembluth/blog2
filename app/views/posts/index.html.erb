@@ -2,7 +2,7 @@
 <br>
 <%= notice %>
 <br>
-<%= link_to_function "Buscar", "$('#hide').toggle()" %>
+<%= link_to_function "Buscar por texto", "$('#hide').toggle()" %>
 <br>
 <br>
 <div id="hide" style="display:none">
@@ -12,6 +12,18 @@ Palabra: <input type="text" name="text" id="text"> &nbsp;&nbsp;&nbsp;
 <input type="submit" value="Buscar">
 </form>
 </div>
+
+<%= link_to_function "Buscar por categoria", "$('#hide1').toggle()" %>
+<br>
+<br>
+<div id="hide1" style="display:none">
+<br>
+<form method="GET" action="/posts/categoria">
+Categoria: <input type="text1" name="text1" id="text1"> &nbsp;&nbsp;&nbsp;
+<input type="submit" value="Buscar">
+</form>
+</div>
+
 <table class="table table-striped">
 	<tr>
 		<th>Titulo</th>
