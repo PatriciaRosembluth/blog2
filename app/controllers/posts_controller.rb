@@ -92,7 +92,7 @@ class PostsController < ApplicationController
   end
 
   def categoria
-    @posts = buscar_categoria(params[:category])
+    @posts = buscar_categoria(params[:text])
     render 'index'
   end
 
