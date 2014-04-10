@@ -18,5 +18,10 @@
     <label for="exampleInputText">Texto</label>
     <input type="text" name ="post[text]" value= "<%=@post.text%>">
   </div>
+  <div class="form-group">
+    <label for="exampleInputCategory">Categoria</label>
+    <input type="string" name ="post[category]" value= "<%=@post.category%>">
+  </div>
+  <br>
   <button class="btn btn-default" type="submit">Publicar</button>
 </form>

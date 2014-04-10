@@ -13,6 +13,11 @@
   <%= @post.created_at %>
 </p>
 
+<p>
+  <strong>Categoria:</strong>
+  <%= @post.category %>
+</p>
+
 <h2>Commentarios</h2>
 <% @post.comments.each do |comment| %>
   <p>

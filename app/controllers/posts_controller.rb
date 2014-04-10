@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 	end
  
 	def create
-  		@post = Post.new(params[:post].permit(:title, :text))
+  		@post = Post.new(params[:post].permit(:title, :text, :category))
   		if @post.save
     		redirect_to '/posts', notice: 'El post fue creado exitosamente'
   		else
@@ -58,7 +58,7 @@ class PostsController < ApplicationController
 
 	def update
   		@post = Post.find(params[:id]) 
-  		if @post.update(params[:post].permit(:title, :text))
+  		if @post.update(params[:post].permit(:title, :text, :category))
     		redirect_to '/posts', notice: 'El post fue actualizado exitosamente'
   		else
     		render 'edit'
@@ -107,6 +107,6 @@ class PostsController < ApplicationController
 
 	private
   	def post_params
-    	params.require(:post).permit(:title, :text)
+    	params.require(:post).permit(:title, :text, :category)
   	end
 end
