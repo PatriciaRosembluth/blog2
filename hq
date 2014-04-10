@@ -1,0 +1,59 @@
+[33mcommit 6291ea6d0394951c87e16fbd037bf1e6992c41ba[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Tue Apr 8 14:35:24 2014 -0400
+
+    Quitar like manual
+
+[33mcommit 89365ac4f4cd754a55dfad0893243a89804c72dd[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Tue Apr 8 12:04:04 2014 -0400
+
+    Bootstrap
+
+[33mcommit 9193065c53643580ecbcc118b2cccb6798900964[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Tue Apr 8 11:18:00 2014 -0400
+
+    Buscar
+
+[33mcommit 8e7c5d8b00ef4f6ca5d9f104d3bb8ae035473613[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Thu Apr 3 23:55:03 2014 -0400
+
+    Layoud de index
+
+[33mcommit bfbefbccf638796f74bf8bdaaaf67ec8f7255f41[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Thu Apr 3 23:02:32 2014 -0400
+
+    Reportes incompleto
+
+[33mcommit 65b8656797087e5fa4bbd085790af89fa453c0a5[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Thu Apr 3 21:31:01 2014 -0400
+
+    Principal y administrativa funcionando
+
+[33mcommit 1233bc4796092d015e4f3682b72c2e1d3d73fddb[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Thu Apr 3 20:04:27 2014 -0400
+
+    Agregar comentario a post
+
+[33mcommit a6c5128cbcabed5fd242d8712b03bfc1efcc4207[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Thu Apr 3 17:54:20 2014 -0400
+
+    CRUD de post
+
+[33mcommit e25d0c5745863c48e3327de49de126bc89b0fe4f[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Thu Apr 3 12:12:39 2014 -0400
+
+    Crecion del index y su controlador
+
+[33mcommit 3abb74f9236dfc26a7af1aac91259fca22a56cc7[m
+Author: Patricia Rosembluth Prado <patty_rosembluth@hotmail.com>
+Date:   Thu Apr 3 11:54:02 2014 -0400
+
+    Creacion del repositorio en git

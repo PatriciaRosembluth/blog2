@@ -26,6 +26,17 @@ class PostsController < ApplicationController
   		end
 	end
 
+  def puts_like
+    @post = Post.find(params[:id])
+    if @post.likes != nil
+      @post.likes = @post.likes+1
+    else
+      @post.likes=1
+    end
+    @post.save
+    redirect_to '/posts' 
+  end
+
 	def show
 		@post=Post.find(params[:id])		
 	end

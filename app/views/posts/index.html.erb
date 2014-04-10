@@ -16,7 +16,7 @@ Palabra: <input type="text" name="text" id="text"> &nbsp;&nbsp;&nbsp;
 	<tr>
 		<th>Titulo</th>
 		<th>Texto</th>
-		<th></th>
+		<th>Likes</th>
 	</tr>
 <% @posts.each do |post| %>
 <tr>
@@ -27,6 +27,10 @@ Palabra: <input type="text" name="text" id="text"> &nbsp;&nbsp;&nbsp;
 		<%= post.text %>
 	</td>
 	<td>
+		<%= post.likes %>
+	</td>
+	<td>
+		<a class="btn btn-default" href="/posts/likes/<%= post.id %>" role="button">Like</a>
 		<a class="btn btn-default" href="/posts/<%= post.id %>" role="button">Ver</a>
 		<a class="btn btn-default" href="/posts/edit/<%= post.id %>" role="button">Editar</a>
 		<a class="btn btn-default" href="/posts/destroy/<%= post.id %>" role="button">Eliminar</a>
